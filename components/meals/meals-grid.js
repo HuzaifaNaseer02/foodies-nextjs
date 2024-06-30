@@ -1,8 +1,13 @@
+import MealItem from './meal-item'
+import classes from './meals-grid.module.css'
+
 const MealsGrid = ({ meals }) => {
   return (
-    <ul className={c}>
+    <ul className={classes.meals}>
       {meals.map(() => {
-        ;<li key={meal.id}></li>
+        ;<li key={meal.id}>
+          <MealItem {...meals} />
+        </li>
       })}
     </ul>
   )
